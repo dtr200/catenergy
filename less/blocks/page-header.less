@@ -1,0 +1,31 @@
+.page-header{
+    max-width: @maxwidth;
+    .flex(@justify: center);
+    position: absolute;
+    top: 55px;
+    left:0;
+    right:0;
+    z-index: 3;
+    margin: auto;
+}
+.page-header__container{    
+    .flex(@justify:space-between);
+    flex-basis: 100%;
+}
+@media (max-width: 1300px){
+    .page-header{
+        top:25px;
+    }
+    .page-header__container{
+        align-items:center;
+    }
+}
+@media (max-width: 768px){
+    .page-header{
+        position: static;
+    }
+    .page-header__container{
+        display: block;
+        position: relative;
+    }
+}

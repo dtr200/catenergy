@@ -1,0 +1,30 @@
+.copyright{
+    .flex(@align: center);
+}
+.copyright__wrapper{
+    .flex(@align: center);
+    text-decoration: none;
+   /*  &:hover .copyright__logo{
+        fill: #68b738;
+    } */
+}
+.copyright__wrapper:hover .copyright__logo{
+    fill: @green;
+}
+.copyright__text{
+    margin-right: 22px;
+    color: black;
+    font-family: @arial;
+}
+
+@media (max-width: 768px){
+    .copyright{
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 0 22px 0;
+    }
+    .copyright__wrapper{
+        flex-basis: 100%;
+        justify-content: space-between;
+    }
+}

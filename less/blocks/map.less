@@ -1,0 +1,88 @@
+.map{
+    position:relative;
+    &--catalog{
+        .center();
+        padding: 0;
+    }
+}
+.map__description{
+    width:570px;
+    height:200px;
+    background: white;
+    .flex(@justify: center, @align: center);
+    position: absolute;
+    top: 95px;
+    left: 110px;
+}
+.map__text-container{
+    .flex(@justify: space-between);
+    width: 405px;
+}
+.map__welcome{
+    width: 155px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.map__address{
+    .flex(@justify:space-between, @direct: column);
+    width: 155px;
+}
+.map__street,
+.map__city{
+    font-size: 14px;
+    font-family: @arial;
+}
+.map__container{
+    height:400px;
+}
+.map__mobile{
+    display: none;
+}
+
+@media (max-width: 1300px){
+    .map__description{
+        position:static;
+        width: 100%;
+        justify-content: start;
+        &--extra{
+            background: @light;
+        }
+    }
+    .map__text-container{
+        width:100%;
+        margin-left: 72px;
+        margin-right: 72px;
+    }
+}
+@media (max-width: 768px){
+    .map__description{
+        width: auto;
+        height: auto;
+        padding: 30px 20px;
+    }
+    .map__text-container{
+        margin:0;        
+    }
+    .map__welcome{
+        font-size: 14px;
+        width: auto;
+        flex-basis: 48%;
+    }
+    .map__address{
+        width: auto;
+        .flex(@justify: center, @direct: column, @basis: 48%);
+    }
+    .map__street,
+    .map__city{
+        font-size: 12px;
+    }
+    .map__container{
+        height: 365px;
+    }
+    .map__desktop{
+        display: none;
+    }
+    .map__mobile{
+        display: block;
+    }
+}

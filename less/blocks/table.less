@@ -1,0 +1,68 @@
+.table{
+    padding-left:0;
+}
+.table__row{
+    list-style-type: none;
+    border-top:1px solid #cdcdcd;    
+    border-collapse: collapse;
+    line-height: 72px;
+    .flex(@justify: space-between, @align: center);
+    &:last-child{
+        border-bottom:1px solid #cdcdcd;
+    }
+}
+.table__product-name{
+    font-size: 18px;
+    text-transform: uppercase;
+    flex-basis: 245px;
+}
+.table__specs{
+    .flex(@justify: space-between, @basis: 285px);
+}
+.table__product-size,
+.table__product-price{
+    font-family: @arial;
+    font-size: 14px;
+}
+
+@media (max-width: 1300px){
+    .table__row{
+        border: none;
+        flex-wrap: wrap;
+        margin: 0 38px;
+        &:last-child{
+            border-bottom:none;
+        }
+    }
+    .table__product-name{
+        flex-basis:70%;
+    }
+    .table__specs{
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 768px){
+    .table__row{
+        margin: 0;
+        border-top: 1px solid #cdcdcd;
+        line-height: normal;
+        .flex(@direct: column, @align: normal);
+        &:last-child{
+            border-bottom:1px solid #cdcdcd;
+        }
+    }
+    .table__product-name{
+        .font(@size: 14px, @height: 14px);
+        margin: 14px 0 16px;
+        flex-basis: auto;
+    }
+    .table__specs{
+        margin-bottom: 15px;
+        flex-basis: auto;
+    }
+    .table__product-size,
+    .table__product-price{
+        .font(@size: 12px, @height: 12px);
+    }
+}

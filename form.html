@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Подбор программы - Кэт энерджи</title>
+    <link rel=" stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header__container">
+            <div class="logo">
+                <a href="/" class="logo__img">
+                    <picture>
+                        <source srcset="img/logo-tablet.svg" media="(min-width:768px)">
+                        <source srcset="img/logo-desktop.svg" media="(min-width:1300px)">
+                        <img class="logo__img-svg" src="img/logo-mobile.svg" alt="Logo">
+                    </picture>
+                </a>
+                <a href="/" class="logo__text logo__text--header">
+                    <span><b class="logo__bold">CAT</b> ENERGY</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="main-nav__button">
+                    <span class="main-nav__burger"></span>
+                </button>
+                <ul class="main-nav__list list main-nav__hide">
+                    <li class="list__item">
+                        <a href="/" class="list__link">Главная</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="/catalog.html" class="list__link">Каталог продукции</a>
+                    </li>
+                    <li class="list__item list__item--active">
+                        <a href="" class="list__link">Подбор программы</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page-main page-main--form">
+        <div class="page-main__title-wrapper">
+            <h1 class="page-main__title">Подбор программы</h1>
+            <p class="page-main__subtitle">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
+
+        <form action="http://echo.htmlacademy.ru" method="POST" class="page-main__form">
+            <section class="data">
+                <div class="data__wrapper">
+                    <div class="data__inner-container">
+                        <div class="data__specs">
+                            <p class="data__row">
+                                <label for="name" class="data__label">Имя:*</label>
+                                <input type="text" id="name" class="data__input" placeholder="барсик" required>
+                            </p>
+                            <p class="data__row">
+                                <label for="weight" class="data__label">Вес (кг):*</label>
+                                <input type="text" id="weight" class="data__input" placeholder="7" required>
+                            </p>
+                            <p class="data__row">
+                                <label for="age" class="data__label">Возраст (лет):</label>
+                                <input type="text" id="age" class="data__input" placeholder="7">
+                            </p>
+                        </div>
+                        <div class="data__reason">
+                            <p class="data__row data__row--reason">
+                                <label class="data__radio-label">
+                                    <input type="radio" class="data__radio" name="programm">
+                                    <span class="data__radio-button"></span>
+                                    <span class="data__radio-text">Похудение</span>
+                                </label>
+                            </p>
+                            <p class="data__row data__row--reason">
+                                <label class="data__radio-label">
+                                    <input type="radio" class="data__radio" name="programm">
+                                    <span class="data__radio-button"></span>
+                                    <span class="data__radio-text">Набор массы</span>
+                                </label>
+                            </p>
+                            <p class="data__row data__row--reason">
+                                <label class="data__radio-label">
+                                    <input type="radio" class="data__radio" name="programm">
+                                    <span class="data__radio-button"></span>
+                                    <span class="data__radio-text">Не знаю (Нужен ваш совет)</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="contact__wrapper">
+                    <h2 class="contact__title">Контактные данные (владельца кота)</h2>
+                    <div class="contact__input-fields">
+                        <label class="contact__label contact__label--email">
+                            <span class="contact__input-text">e-mail:*</span>
+                            <input type="text" class="contact__input" placeholder="kuklachev@gmail.com" required>
+                        </label>
+                        <label class="contact__label contact__label--phone">
+                            <span class="contact__input-text">телефон:*</span>
+                            <input type="text" class="contact__input" placeholder="8 (960) 900-60-90" required>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="comment">
+                <div class="comment__wrapper">
+                    <h2 class="comment__title">Комментарий</h2>
+                    <div class="comment__textarea-wrapper">
+                        <textarea name="" id="" cols="30" rows="10" class="comment__textarea"
+                            placeholder="Расскажите обо всех повадках кота"></textarea>
+                    </div>
+                </div>
+            </section>
+            <section class="upsale">
+                <div class="upsale__wrapper">
+                    <h2 class="upsale__title">Дополнительно</h2>
+                    <div class="upsale__checkbox-wrapper">
+                        <label class="upsale__label">
+                            <input type="checkbox" class="upsale__checkbox">
+                            <span class="upsale__big-checkbox"></span>
+                            <span class="upsale__input-text">Сахарозаменитель</span>
+                        </label>
+                        <label class="upsale__label">
+                            <input type="checkbox" class="upsale__checkbox">
+                            <span class="upsale__big-checkbox"></span>
+                            <span class="upsale__input-text">Питьевая вода</span>
+                        </label>
+                        <label class="upsale__label">
+                            <input type="checkbox" class="upsale__checkbox">
+                            <span class="upsale__big-checkbox"></span>
+                            <span class="upsale__input-text">Молоко</span>
+                        </label>
+                        <label class="upsale__label">
+                            <input type="checkbox" class="upsale__checkbox">
+                            <span class="upsale__big-checkbox"></span>
+                            <span class="upsale__input-text">Витамины</span>
+                        </label>
+                    </div>
+                    <div class="upsale__submit-wrapper">
+                        <input type="submit" class="upsale__submit order-button" value="Отправить заявку">
+                        <span class="upsale__important">* - Обязательные поля</span>
+                    </div>
+                </div>
+            </section>
+        </form>
+        <section class="map map--catalog">
+            <div class="map__description map__description--extra">
+                <div class="map__text-container">
+                    <span class="map__welcome">Приглашаем к сотрудничеству дилеров!</span>
+                    <div class="map__address">
+                        <span class="map__street">ул. Большая Конюшенная, д. 19.8</span>
+                        <span class="map__city">Санкт-Петербург</span>
+                    </div>
+                </div>
+            </div>
+            <div class="map__container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351852843!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1592147936816!5m2!1sru!2sru"
+                    width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0" class="map__desktop"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351852843!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1592147936816!5m2!1sru!2sru"
+                    width="100%" height="365" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0" class="map__mobile"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="page-footer__container">
+            <div class="logo logo--footer">
+                <a href="/" class="logo__text logo__text--footer"><b class='logo__bold'>Cat</b> energy</a>
+            </div>
+            <ul class="social">
+                <li class="social__item"><img src="img/vk.png" alt=""></li>
+                <li class="social__item"><img src="img/insta.png" alt=""></li>
+                <li class="social__item"><img src="img/fb.png" alt=""></li>
+            </ul>
+            <div class="copyright">
+                <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__wrapper" target='_blank'>
+                    <span class="copyright__text">HTML Academy</span>
+                    <svg class="copyright__logo" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px"
+                        viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                        <path
+                            d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="js/header.js"></script>
+</body>
+
+</html>

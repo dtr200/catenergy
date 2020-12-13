@@ -1,0 +1,114 @@
+.upsale__wrapper{
+    .center();
+    position: relative;
+}
+.upsale__title{
+    .h2-title();
+}
+.upsale__checkbox-wrapper{
+    .flex(@justify: space-between);
+    padding: 70px 0 60px;
+}
+.upsale__label{
+    width: calc(25% - 40px);
+    .flex(@align: center);
+}
+.upsale__checkbox{
+    display: none;
+}
+.upsale__big-checkbox{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #cdcdcd;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: url(../img/form/icon-tick.svg) no-repeat center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .2s;
+    }
+}
+.upsale__checkbox:checked + .upsale__big-checkbox::before{
+    opacity: 1;
+}
+.upsale__input-text{
+    .text(@align: right, @trans: uppercase);
+    font-size: 18px;
+    margin-left: 20px;
+}
+.upsale__submit-wrapper{
+    .flex(@justify: space-between);
+}
+.upsale__important{
+    display: block;
+    line-height: 40px;
+    font-family: @arial;
+}
+.upsale__submit,
+.upsale__important{
+    width: calc(50% - 40px);
+}
+
+@media (max-width: 1300px){
+    .upsale__wrapper{
+        padding: 0 70px;
+    }
+    .upsale__title{
+        .h2-title-tablet();
+    }
+    .upsale__checkbox-wrapper{
+        flex-wrap: wrap;
+        padding-top: 58px;
+        padding-bottom: 55px;
+    }
+    .upsale__label{
+        width: calc(50% - 40px);
+        margin-top: 32px;
+    }
+}
+@media (max-width: 768px){
+    .upsale__wrapper{
+        padding: 0 20px;
+    }
+    .upsale__title{
+        .h2-title-mobile();
+    }
+    .upsale__checkbox-wrapper{
+        padding-top: 42px;
+        padding-bottom: 33px;
+    }
+    .upsale__label{
+        width: 100%;
+        margin-top: 15px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .upsale__big-checkbox{
+        width: 30px;
+        height: 30px;
+    }
+    .upsale__input-text{
+        margin-left: 15px;
+    }
+    .upsale__submit-wrapper{
+        flex-direction: column;
+    }
+    .upsale__submit,
+    .upsale__important{
+        width: 100%;
+    }
+    .upsale__important{
+        line-height: 12px;
+        margin-top: 23px;
+        text-align: center;
+    }
+}

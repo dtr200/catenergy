@@ -1,0 +1,102 @@
+.contact{
+    border-bottom: 2px solid @green;
+}
+.contact__input-fields{
+    padding: 95px 0;
+}
+.contact__wrapper{
+    position: relative;
+    .center();
+}
+.contact__title{
+    .h2-title();
+}
+.contact__input-fields{
+    .flex(@justify: space-between);
+}
+.contact__label{
+    width: calc(50% - 40px);
+    text-align: right;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &--email::after,
+    &--phone::after{
+        content: '';
+        display: block;    
+        position: absolute;
+        right: 20px;
+    }
+    &--email::after{        
+        width: 18px;
+        height: 14px;
+        background: url(../img/form/icon-mail.svg);
+    }
+    &--phone::after{
+        width: 20px;
+        height: 21px;
+        background: url(../img/form/icon-phone.svg);
+    }
+}
+.contact__input{
+    margin-left: 15px;
+    flex-grow: 1;
+    border: 1px solid #cdcdcd;
+    .input-inner-text();    
+    &:hover{
+        border: 1px solid fade(#444, 50%);
+    }
+    &:focus{
+        box-shadow: inset 0 0 0 1px black;
+    }
+}
+.contact__input-text{
+    .text(@align: right, @trans: uppercase);
+    font-size: 18px;
+}
+
+@media (max-width: 1300px){
+    .contact__wrapper{
+        padding: 0 70px;
+    }
+    .contact__title{
+        .h2-title-tablet();
+        width: 57%;
+    }
+    .contact__input-fields{
+        flex-direction: column;
+    }
+    .contact__label{
+        width: auto;
+        justify-content: space-between;
+        &--email{
+            margin-bottom: 20px;;
+        }
+    }
+    .contact__input{
+        flex-grow: 0;
+        width: 85%;
+    }
+}
+@media (max-width: 768px){
+    .contact__wrapper{
+        padding: 0 20px;
+    }
+    .contact__title{
+        .h2-title-mobile();
+    }
+    .contact__input-fields{
+        padding: 65px 0 42px;
+    }
+    .contact__label--email::after,
+    .contact__label--phone::after{
+        right: 15px;
+    }
+    .contact__input-text{
+        .font(@size: 14px, @height: 14px);
+    }
+    .contact__input{
+        width: 70%;
+        .font(@size: 14px, @height: 45px);
+    }
+}

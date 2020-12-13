@@ -1,0 +1,115 @@
+.main-img{
+    max-width:@maxwidth;
+    height: 698px;
+    position: relative;
+    .flex(@align: center);
+    &::after{
+        content:'';
+        display: block;
+        width:50%;
+        height:100%;
+        background: url(../img/background-top.png) no-repeat left/cover;
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: 0;
+    }
+}
+.main-img__text-side{
+    margin-left: 190px;
+    width:420px;
+    // position: relative;
+    z-index: 2;
+}
+.main-img__product{
+    width:551px;
+    height:499px;
+    position: absolute;
+    left: 240px;
+    right:0;
+    top: 100px;
+    bottom:0;
+    margin:auto;
+    z-index: -1;
+}
+.main-img__title{
+    .font(@size: 55px, @height: 55px);
+    margin-bottom: 47px;
+}
+.main-img__subtitle{
+    margin-bottom:55px;
+    font-size:20px;
+    text-transform: uppercase;
+}
+.main-img__button{
+    .text(@align: center, @trans: uppercase, @decor: none, @color: white);
+    .font(@size: 18px, @height: 52px);
+    display: block;
+    width:245px;
+    height:52px;
+    background:@green;
+}
+
+@media (max-width: 1300px){
+    .main-img{
+        position: relative;
+        margin-bottom: 255px;
+        align-items: normal;
+        &::after{
+            display:none;
+        }
+    }
+    .main-img__title{
+        margin-top: 145px;
+    }   
+    .main-img__subtitle{
+        margin-bottom:50px;
+    }
+    .main-img__product{
+        top: 340px;
+        left:0;
+        width:709px;
+        height: 609px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:768px){
+    .main-img{
+        align-items: normal;
+        height:auto;
+        margin-bottom: 0;
+        &::before{
+            content: '';
+            min-height: 305px;
+            background: url(../img/index-background-mobile.jpg) no-repeat center;
+            background-size: cover;
+            width: 100%;
+            position: absolute;            
+            top: 0;
+        }
+    }
+    .main-img__container{
+        margin-left:120px;
+    }
+    .main-img__text-side{
+        .flex(@direct: column, @align: center);
+        margin: 0 auto;
+        width:auto;
+    }
+    .main-img__title{
+        .font(@size:35px, @height: 35px);
+        .text(@align: center, @color: white);
+        margin: 28px 0;
+        padding: 0 10px;
+    }
+    .main-img__subtitle{
+        .text(@align: center, @trans: uppercase, @color: white);
+        .font(@size: 14px, @height: 14px);
+    }
+    .main-img__product{        
+        width:280px;
+        height: 271px;
+        position:static;
+    }
+}

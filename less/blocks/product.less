@@ -1,0 +1,125 @@
+.product{
+    width: 245px;
+    background: linear-gradient(transparent 0px, transparent 70px, @light 70px, @light);
+    margin-top:85px;
+    &--extra{
+        background: linear-gradient(transparent 0px, transparent 70px, #f8f8f8 70px, #f8f8f8);
+    }
+}
+.product__container{
+    position: relative;
+    &--plus{
+        padding-top: 134px;
+    }
+    &--small{
+        padding-top:34px;
+    }
+}
+.product__text-side{
+    padding: 36px 40px 33px;
+    &--plus{
+        padding-top: 50px;
+        padding-bottom: 85px;
+    }
+}
+.product__img--plus{
+    width: 60px;
+    height: 60px;
+    background: url(../img/catalog/icon-plus.svg);
+    margin:auto;
+    opacity: .5;
+}
+.product__title{
+    .font(@size:18px, @height: 18px);
+    .text(@align: center, @trans: uppercase);
+    margin-bottom: 30px;
+}
+.product__table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.product__table-cell{    
+    font-family: @arial;
+    .font(@size:14px, @height: 30px);
+    &:last-child{
+        text-align: right;
+    }
+}
+.product__table-row{
+    border-bottom: 1px solid #cdcdcd;
+}
+.product__extra{
+    font-family: @arial;
+    font-size:14px;
+    text-align: center;
+}
+.product__order-container{
+    padding: 0 40px 40px;
+}
+.product__order{
+    &--plus{
+        color: #444;
+    }
+}
+
+@media (max-width: 1300px){
+    .product{
+        width: 324px;
+        margin: 60px 30px 0;
+        &--extra{
+            background: none;
+        }
+    }
+    .product__text-side--plus{
+        padding-bottom: 120px;
+    }
+}
+@media (max-width: 768px){
+    .product{
+        background: @light;
+        width: 100%;
+        margin: 0 0 25px;
+    }
+    .product__container--small{
+        padding-top: 0;
+    }
+    .product__container--plus{
+        padding-top: 25px;
+    }
+    .product__description{
+        .flex(@align: center);
+    }
+    .product__img{
+        display: block;
+        &--plus{
+            width: 30px;
+            height: 30px;
+            margin-bottom: 25px;
+        }
+    }
+    .product__text-side{
+        padding: 0 10px;
+        margin: auto;
+        width: 100%;
+    }
+    .product__title{
+        .font(@size: 14px, @height: 14px);
+        margin-bottom: 18px;
+        text-align: left;
+        &--plus{
+            text-align: center;
+        }
+    }
+    .product__extra{
+        margin-bottom: 25px;
+    }
+    .product__table-row{
+        border-bottom: none;
+    }
+    .product__table-cell{
+        .font(@size: 12px, @height: 20px);
+    }
+    .product__order-container{
+        padding: 0;
+    }
+}
